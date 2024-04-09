@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SupplierService from '../../Service/SupplierService';
 import './CSS/consultar_proveedores.css';
+import BarraDashboard from './BarraDashboard';
 
 const ListarProveedores = () => {
   const [suppliers, setSuppliers] = useState([]);
@@ -41,63 +42,66 @@ const ListarProveedores = () => {
   };
 
   return (
-    <div className="container-ListSuppliers">
-      <div className="titulo">
-        <h2>Proveedores Registrados</h2>
-      </div>
-      <br />
-      <div className='button-redirect'>
-        <Link to={"/Admin/RegistrarProveedor"} className="user-link">Añadir Nuevo</Link>
-      </div>
-      <br /><br /><br />
-      <div className="table-responsive">
-        <table id="miTabla" className="table table-striped table-bordered table-sm">
-          <thead>
-            <tr>
-              <th>NIT</th>
-              <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Dirección</th>
-              <th>Teléfono</th>
-              <th>Email</th>
-              <th>Razón Social</th>
-              <th>Productos</th>
-              <th>Marca</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            {currentSuppliers.map(supplier => (
-              <tr key={supplier.pkNit}>
-                <td>{supplier.pkNit}</td>
-                <td>{supplier.name}</td>
-                <td>{supplier.lastName}</td>
-                <td>{supplier.address}</td>
-                <td>{supplier.telephone}</td>
-                <td>{supplier.email}</td>
-                <td>{supplier.companyName}</td>
-                <td>{supplier.productType}</td>
-                <td>{supplier.supplierBrand}</td>
-                <td>
-                  <br />
-                  <Link className="editar" to={`/Admin/EditarProveedor/${supplier.pkNit}`}>Editar</Link>
-                  <br /><br />
-                </td>
+    <>
+      <BarraDashboard />
+      <div className="container-ListSuppliers">
+        <div className="titulo">
+          <h2>Proveedores Registrados</h2>
+        </div>
+        <br />
+        <div className='button-redirect'>
+          <Link to={"/Admin/RegistrarProveedor"} className="user-link">Añadir Nuevo</Link>
+        </div>
+        <br /><br /><br />
+        <div className="table-responsive">
+          <table id="miTabla" className="table table-striped table-bordered table-sm">
+            <thead>
+              <tr>
+                <th>NIT</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Razón Social</th>
+                <th>Productos</th>
+                <th>Marca</th>
+                <th>Acciones</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {currentSuppliers.map(supplier => (
+                <tr key={supplier.pkNit}>
+                  <td>{supplier.pkNit}</td>
+                  <td>{supplier.name}</td>
+                  <td>{supplier.lastName}</td>
+                  <td>{supplier.address}</td>
+                  <td>{supplier.telephone}</td>
+                  <td>{supplier.email}</td>
+                  <td>{supplier.companyName}</td>
+                  <td>{supplier.productType}</td>
+                  <td>{supplier.supplierBrand}</td>
+                  <td>
+                    <br />
+                    <Link className="editar" to={`/Admin/EditarProveedor/${supplier.pkNit}`}>Editar</Link>
+                    <br /><br />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {/* Mostrar botones de paginación */}
+        <div className="pagination">
+          {currentPage > 1 && (
+            <button onClick={prevPage}>Anterior</button>
+          )}
+          {currentSuppliers.length === suppliersPerPage && (
+            <button onClick={nextPage}>Siguiente</button>
+          )}
+        </div>
       </div>
-      {/* Mostrar botones de paginación */}
-      <div className="pagination">
-        {currentPage > 1 && (
-          <button onClick={prevPage}>Anterior</button>
-        )}
-        {currentSuppliers.length === suppliersPerPage && (
-          <button onClick={nextPage}>Siguiente</button>
-        )}
-      </div>
-    </div>
+    </>
   );
 };
 

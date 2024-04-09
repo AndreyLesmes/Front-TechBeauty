@@ -212,7 +212,7 @@ const ListarProductos = () => {
           <h2>Productos Registrados</h2>
         </div>
         <br />
-        <button onClick={showCreateForm} className="create-new">Añadir Nuevo</button>
+        <button onClick={showCreateForm} className="create-new">Agregar Nuevo</button>
         {showForm && (
           <div className='card-tittle'>
             {formType === 'create' ? (

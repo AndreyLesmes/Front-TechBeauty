@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './CSS/error404.css';
+import BarraDashboard from './BarraDashboard';
 
-const Error404 = () => {
+const Error404Admin = () => {
 
     return (
         <>
+            <BarraDashboard />
             <div className="cont">
                 <h2>Oops!  No se encuentra la p&aacute;gina</h2>
                 <h1>404</h1>
@@ -16,4 +18,4 @@ const Error404 = () => {
     );
 }
 
-export default Error404;
+export default Error404Admin;

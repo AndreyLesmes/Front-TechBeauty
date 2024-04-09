@@ -116,8 +116,8 @@ const Header = ({ allProducts, setAllProducts, total, setTotal, countProducts, s
                             <button className="btn-search"><i className="fa-solid fa-magnifying-glass"></i></button>
                         </form>
                         <div className='crud-components'>
-                            <Link to={"/ListarProductos"} className="user-link">Productos</Link>
-                            <Link to={"/ListarProveedores"} className="user-link">Proveedores</Link>
+                            <Link to={"/Admin/ListarProductos"} className="user-link">Productos</Link>
+                            <Link to={"/Admin/ListarProveedores"} className="user-link">Proveedores</Link>
                         </div>
                     </nav>
                 </div>

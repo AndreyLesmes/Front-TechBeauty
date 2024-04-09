@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './CSS/contenido.css';
 import BarraDashboard from './BarraDashboard';
 
@@ -7,7 +8,7 @@ const Administrador = () => {
         <div>
             <BarraDashboard />
             <div className="bienvenido">
-                <h1 className="titulo">Bienvendo al Sistema, Usuari@ Administrador</h1>
+                <h1 className="titulo">Bienvenido al Sistema, Usuario Administrador</h1>
                 <br />
                 <p className="contexto">
                     Un administrador, al acceder al sistema, se beneficia de un inicio de sesión seguro mediante la
@@ -24,52 +25,52 @@ const Administrador = () => {
                 <h3>Acciones Posibles a Realizar</h3>
                 <div className="botonesAcciones">
                     <div className="botones">
-                        <a href="registrar_Producto.php">
+                        <Link to="/Admin/CrearProducto">
                             <i className="bi bi-box2-fill"></i>
                             <span>Registrar Producto</span>
-                        </a>
+                        </Link>
                     </div>
                     <div className="botones">
-                        <a href="listarProductos.php">
+                        <Link to="/Admin/ListarProductos">
                             <i className="bi bi-search"></i>
                             <span>Consultar Producto</span>
-                        </a>
+                        </Link>
                     </div>
                     <div className="botones">
-                        <a href="registrar_proveedores.php">
+                        <Link to="/Admin/RegistrarProveedor">
                             <i className="bi bi-file-earmark-person-fill"></i>
                             <span>Agregar Proveedor</span>
-                        </a>
+                        </Link>
                     </div>
                     <div className="botones">
-                        <a href="consultar_proveedores.php">
+                        <Link to="/Admin/ListarProveedores">
                             <i className="bi bi-file-earmark-person-fill"></i>
                             <span>Consultar Proveedores</span>
-                        </a>
+                        </Link>
                     </div>
                     <div className="botones">
-                        <a href="error404.php">
+                        <Link to="/Admin/Error404">
                             <i className="bi bi-bag-plus-fill"></i>
                             <span>Registrar Compra</span>
-                        </a>
+                        </Link>
                     </div>
                     <div className="botones">
-                        <a href="error404.php">
+                        <Link to="/Admin/Error404">
                             <i className="bi bi-search"></i>
                             <span>Buscar Compra</span>
-                        </a>
+                        </Link>
                     </div>
                     <div className="botones">
-                        <a href="error404.php">
+                        <Link to="/Admin/Error404">
                             <i className="bi bi-bag-check-fill"></i>
                             <span>Ventas Realizadas</span>
-                        </a>
+                        </Link>
                     </div>
                     <div className="botones">
-                        <a href="datos_Personales.php">
+                        <Link to="/Admin/DatosPersonales">
                             <i className="bi bi-card-text"></i>
                             <span>Datos Personales</span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

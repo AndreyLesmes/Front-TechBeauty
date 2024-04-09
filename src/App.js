@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Index from './Pages/Index';
 import Login from './Pages/Login';
 import Header from './Pages/Layout/Header';
@@ -23,6 +23,7 @@ import EditarProducto from './Pages/Administrador/EditarProducto';
 import EditarProveedor from './Pages/Administrador/EditarProveedor';
 import Administrador from './Pages/Administrador/Administrador';
 import ListarProductos1 from './Pages/Administrador/ListarProductos';
+import Error404Admin from './Pages/Administrador/Error404Administrador';
 
 function FooterControl() {
   const location = useLocation();
@@ -59,13 +60,15 @@ function App() {
         <Route path="/Tienda/Cabello" element={<Cabello allProducts={allProducts} setAllProducts={setAllProducts} total={total} setTotal={setTotal} countProducts={countProducts} setCountProducts={setCountProducts} categoria={categoria}/>} />
         <Route path="/Error404" element={<Error404 />} />
         <Route path="/Error500" element={<Error500 />} />
-        <Route path="/ListarProductos" element={<ListarProductos1 />} />
-        <Route path="/ListarProveedores" element={<ListarProveedores />} />
+        {/*Rutas Administrador*/}
+        <Route path="/Admin/ListarProductos" element={<ListarProductos1 />} />
+        <Route path="/Admin/ListarProveedores" element={<ListarProveedores />} />
         <Route path="/Admin/CrearProducto" element={<CrearProducto />} />
         <Route path="/Admin/RegistrarProveedor" element={<RegistrarProveedor />} />
         <Route path="/Admin/EditarProducto/:id" element={<EditarProducto />} />
         <Route path="/Admin/EditarProveedor/:nit" element={<EditarProveedor />} />
         <Route path="/Administrador" element={<Administrador />} />
+        <Route path="/Admin/Error404" element={<Error404Admin />} />
       </Routes>
 
       <FooterControl />
