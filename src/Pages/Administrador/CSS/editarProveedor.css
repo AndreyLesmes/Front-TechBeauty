@@ -1,0 +1,113 @@
+main h1 {
+    font-size: 50px;
+    color: #000000;
+    align-items: center;
+}
+
+.registro_proveedores {
+    width: 680px;
+    padding: 20px 8px;
+    margin: 6% auto;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 90px;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 5px black;
+    margin-left: 30%;
+}
+
+.categorias {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #dc3234;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.control-EditSupplier {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #dc3234;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.registro_proveedores .registroSupplier .boxEdit-Supplier label {
+    font-size: 18px;
+    margin: 5px;
+    color: #000000;
+}
+
+.registro_proveedores .registroSupplier {
+    width: 600px;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+}
+
+.boton-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.registro_proveedores .registroSupplier .boxEdit-Supplier .button-editSupplier,
+.registro_proveedores .registroSupplier .botonRegresar{
+    display: block;
+    margin: 40px auto 0;
+    padding: 15px 25px;
+    background-color: #f14444;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 4%;
+}
+
+.registro_proveedores .registroSupplier .boxEdit-Supplier .button-editSupplier:hover {
+    background-color: #e69581;
+}
+
+.registro_proveedores .registroSupplier .botonRegresar{
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+
+
+.registro_proveedores .botonRegresar:hover {
+    background-color: #e69581;
+    text-decoration: none;
+}
+
+@media (max-width: 1250px) {
+    .content-container {
+        padding: 1%;
+        width: 150px;
+    }
+
+    main h1 {
+        width: 350%;
+        margin: 0 0;
+    }
+
+    .registroSupplier {
+        width: 350%;
+        height: auto;
+    }
+
+    .registro_proveedores {
+        width: 450px;
+        margin: 20px;
+    }
+
+    .registro_proveedores .registroSupplier {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 8%;
+        width: auto;
+    }
+
+}

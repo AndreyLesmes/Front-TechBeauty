@@ -1,0 +1,390 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+    --primary-color: #A6BDDC;
+    --background-color: #fffdfa;
+    --rosa: #FFB6C1;
+    --gris: #f5f5dcb2; /*Para el hover*/
+    --negro: #000000;
+    --lilaClaro: #D9A2E3;
+}
+
+/*Utilidades*/
+
+.containerHeader {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/*Header*/
+
+.container-hero {
+    background-color: var(--background-color);
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-nombre {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+
+.container-nombre h1 a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 3rem;
+    text-transform: uppercase;
+    /*Para poner la letra en mayuscula*/
+    letter-spacing: -1px;
+}
+
+.container-user {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.container-user a {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--primary-color);
+    padding-right: 1.5rem;
+    padding-left: .5rem;
+    border-right: 1px solid #000000;
+}
+
+
+.container-user .fa-cart-shopping {
+    font-size: 2.1rem;
+    color: var(--primary-color);
+    padding-right: .1rem;
+}
+
+.container-user a:hover,
+.container-user .fa-cart-shopping:hover {
+    color: var(--negro);
+}
+
+.content-shopping-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Navbar*/
+.container-navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+
+.menu-toggle,
+.close-menu {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--negro);
+    font-weight: 600;/*Para agregar un tipo de negrita a la letra*/
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+/*Esto es para la linea debajo del nombre li*/
+.menu a::after {
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.menu a:hover::after {
+    opacity: 1;
+}
+
+.menu a:hover {
+    color: #FFF;
+}
+
+.crud-components{
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    font-size: 1.3rem;
+}
+
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid #FFF;
+    border-radius: 20px;
+    background-color: #FFF;
+    height: 4.4rem;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.search-form input {
+    outline: none;
+    font-family: inherit;
+    border: none;
+    width: 23rem;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    cursor: pointer;
+}
+
+.search-form .btn-search {
+    border: none;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+}
+
+.btn-search i {
+    font-size: 1.5rem;
+    color: #FFF;
+    cursor: pointer;
+}
+
+
+.container-icon{
+    position: relative;
+}
+
+
+#contador-productos{
+    font-size: 12px;
+}
+
+.container-cart-products{
+    position: absolute;
+    top: 3rem;
+    right: 0;
+
+    background-color: #fff;
+    width: 500px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+
+}
+
+.carrito-producto-eliminar{
+    border: 0;
+    background-color: transparent;
+    font-size: 3rem;
+}
+
+
+.carrito-producto-eliminar .fa-x:hover{
+    color: red;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+.cart-total{
+    font-size: 1.4rem;
+}
+
+.total-pagar{
+    font-size: 1.2rem;
+}
+
+.carrito-producto-imagen{
+    width: 5rem;
+}
+
+.carrito-vacio{
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.hidden-cart{
+    display: none;
+}
+
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 10px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+
+.cart-table th {
+    background-color: var(--gris);
+}
+
+.cart-table tbody tr:nth-child(even) {
+    background-color: var(--background-color);
+}
+
+.cart-table tbody tr:hover {
+    background-color: var(--primary-color);
+}
+
+.vaciar-carrito {
+    width: 95%;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: block;
+    margin: 0 auto 1rem;
+    border: 0;
+    background-color: var(--primary-color);
+    color: var(--negro);   
+}
+
+.vaciar-carrito:hover{
+    background-color: var(--negro);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+
+/*Footer*/
+.footer {
+    background-color: var(--primary-color);
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 1.9rem;
+}
+
+.menu-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 30rem;
+    gap: 3rem;
+    justify-items: center;
+}
+
+.title-footer {
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.contact-info,
+.information,
+.logo-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-info ul,
+.information ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li {
+    list-style: none;
+    color: #FFF;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.information .description {
+    font-size: 1.4rem;
+    color: #FFF;
+}
+
+.information li a {
+    color: #FFF;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: .1rem;
+}
+
+.information li a:hover {
+    color: var(--negro);
+}
+
+.social-icons {
+    display: flex;
+    gap: 6.5rem;
+}
+
+.social-icons i {
+    font-size: 3.6rem;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: var(--negro);
+}
+
+.social-icons .facebook a:hover,
+.social-icons .instagram:hover {
+    color: var(--gris);
+}
+
+.copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--background-color);
+}
+
+.copy small {
+    font-weight: 400;
+    font-size: 1.2rem;
+}

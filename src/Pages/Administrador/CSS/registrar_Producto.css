@@ -1,0 +1,135 @@
+/*****************************************/
+.container-createProduct,
+.containerEditProduct{
+    margin: 0 30%;
+}
+
+main h1 {
+    font-size: 50px;
+    color: #000000;
+    margin: 2rem;
+    text-align: center;
+}
+
+.card-body{
+    margin: 0 30%;
+}
+
+/*fondo registro de producto*/
+
+.registro_productos, 
+.editar_productos{
+    width: 700px;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 90px;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 5px black;
+}
+
+/*Estilo de categorias*/
+
+.categorias-select{
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #A6BDDC;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #fff;
+    margin-top: 4px;
+}
+
+/*caja de formulario*/
+.control-create,
+.control-edit {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #A6BDDC;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 4px;
+}
+
+/*letra formulario*/
+
+.registro_productos .registrarProductos .box-create label,
+.editar_productos .editarProductos .box-edit label {
+    font-size: 18px;
+    margin: 5px;
+    color: #000000;
+}
+
+/*division de pagina*/
+
+.registro_productos .registrarProductos,
+.editar_productos .editarProductos{
+    width: 650px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 45px;
+}
+
+/*boton*/
+
+.registro_productos .registrarProductos .box-create .button-create,
+.editar_productos .editarProductos .box-edit .button-edit {
+    display: block;
+    margin: 40px auto 0;
+    padding: 15px 25px;
+    background-color: #A6BDDC;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 4%;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.registro_productos .registrarProductos .box-create .button-create:hover,
+.editar_productos .editarProductos .box-edit .button-edit:hover {
+    background-color: #000000;
+}
+
+.buttons-action{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    
+}
+
+
+
+@media(max-width: 968px) {
+    
+    
+
+    main h1{
+        width: 350%;
+        margin: 0 0;
+    }
+
+    .registrarProductos,
+    .editarProductos {
+        width: 350%;
+        height: auto;
+    }
+
+    .registro_productos,
+    .editar_productos{
+        width: 450px;
+        margin: 1rem;
+    }
+
+    .registro_productos .registrarProductos,
+    .editar_productos .editarProductos{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 8%;
+        width: auto;
+    }
+
+
+    
+}

@@ -1,0 +1,50 @@
+:root{
+    --blanco: #fff;
+    --sobre-menu: #f5f5dcc4;
+    --bg-menu: #A6BDDC;
+    --bg-body: #c7e1ff;
+}
+
+.bienvenido {
+    flex-grow: 1;
+    padding: 2%;
+    padding-left: 18%;
+    padding-right: 5%;
+}
+
+.bienvenido .titulo{
+    font-size: 40px;
+    padding: 30px 50px;
+}
+
+.bienvenido .contexto{
+    font-size: 22;
+}
+
+.bienvenido h3{
+    font-size: 28px;
+    padding: 30px 50px;
+}
+
+.bienvenido .botonesAcciones {
+    display: flex;
+    gap: 30px;
+}
+
+.bienvenido .botonesAcciones .botones {
+    flex: 1;
+    text-align: center; 
+    background: var(--bg-menu);
+    border-radius: 8px;
+}
+
+.bienvenido .botonesAcciones a{
+    display: block;
+    padding: 30px;
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+.bienvenido .botonesAcciones a:hover{
+    background: var(--sobre-menu);
+}

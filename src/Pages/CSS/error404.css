@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+    --primary-color: #A6BDDC;
+    --background-color: #fffdfa;
+    --rosa: #FFB6C1;
+    --gris: #f5f5dcb2;
+    /*Para el hover*/
+    --negro: #000000;
+    --lilaClaro: #D9A2E3;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--background-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Utilidades*/
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/*Header*/
+
+.container-hero {
+    background-color: var(--background-color);
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-nombre {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+
+.container-nombre h1 a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 3rem;
+    text-transform: uppercase;
+    /*Para poner la letra en mayuscula*/
+    letter-spacing: -1px;
+}
+
+.container-user {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.container-user a {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--primary-color);
+    padding-right: 1.5rem;
+    padding-left: .5rem;
+    border-right: 1px solid #000000;
+}
+
+
+.container-user .fa-cart-shopping {
+    font-size: 2.1rem;
+    color: var(--primary-color);
+    padding-right: .1rem;
+}
+
+.container-user a:hover,
+.container-user .fa-cart-shopping:hover {
+    color: var(--negro);
+}
+
+.content-shopping-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Navbar*/
+.container-navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+
+.menu-toggle,
+.close-menu {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--negro);
+    font-weight: 600;
+    /*Para agregar un tipo de negrita a la letra*/
+    position: relative;
+}
+
+/*Esto es para la linea debajo del nombre li*/
+.menu a::after {
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.menu a:hover::after {
+    opacity: 1;
+}
+
+.menu a:hover {
+    color: #FFF;
+}
+
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid #FFF;
+    border-radius: 20px;
+    background-color: #FFF;
+    height: 4.4rem;
+    overflow: hidden;
+}
+
+.search-form input {
+    outline: none;
+    font-family: inherit;
+    border: none;
+    width: 23rem;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    cursor: pointer;
+}
+
+.search-form .btn-search {
+    border: none;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+}
+
+.btn-search i {
+    font-size: 1.5rem;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/*posición error*/
+
+.cont {
+    width: 100%;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: var(--primary-color);
+}
+
+
+/*Animacion 3*/
+
+.cont h1 {
+    font-size: 200px;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 15px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.cont p {
+    padding: 25px 40px;
+    font-size: 2.5rem;
+    color: #000000d3;
+}
+
+.cont h2 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.cont a {
+    text-decoration: none;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 12px 24px;
+    display: inline-block;
+    border-radius: 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+    animation: salto 1s infinite;
+}
+
+@keyframes salto {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+/*boton ir a casa*/
+
+.cont a {
+    text-decoration: none;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 12px 24px;
+    display: inline-block;
+    border-radius: 25px;
+    font-size: 17px;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.cont a:hover {
+    background: var(--negro);
+}
+
+
+@media(max-width: 968px) {
+
+    html{
+        font-size: 55%;
+    }
+
+    .hero{
+        padding: 2rem;
+    }
+
+    .container-logo-img{
+        display: none;
+    }
+
+    .content-shopping-cart{
+        display: none;
+    }
+
+    .navbar{
+        padding: 1rem 2rem;
+    }
+
+    .navbar .fa-bars{
+        display: block;
+        color: #FFF;
+        font-size: 3rem;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block; 
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #FFF;
+        cursor: pointer;
+    }
+
+    .show-menu {
+        display: block; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 31rem;
+        height: 100%;
+        background-color: var(--primary-color);
+        z-index: 1;
+        padding: 2rem; 
+        text-align: center; 
+    }
+
+    .show-menu li {
+        margin-top: 44px;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 3rem;
+    }
+
+    .show-menu a{
+        font-size: 14px;
+    }
+
+    
+    .close-menu {
+        display: none; 
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: #FFF;
+        cursor: pointer;
+        background-color: var(--primary-color);
+        border: none;
+    }
+
+    .close-menu i{
+        font-size: 5rem;
+    }
+
+    .show-menu .menu-toggle {
+        display: none; 
+    }
+
+    .show-menu .close-menu {
+        display: block; 
+    }
+
+    .menu-footer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .copy{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+
+}
+
+/*Responsive 468px*/
+
+@media(max-width: 468px) {
+
+    html{
+        font-size: 42.5%;
+    }
+
+    .menu-footer{
+        grid-template-columns: 1fr;
+    }
+
+    .menu-footer .logo-footer{
+        width: 55%;
+    }
+
+}

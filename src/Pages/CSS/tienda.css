@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+    --primary-color: #A6BDDC;
+    --background-color: #fffdfa; 
+    --rosa: #FFB6C1;
+    --gris: #f5f5dcb2; /*Para el hover*/
+    --negro: #000000;
+    --lilaClaro: #D9A2E3; 
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--background-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Utilidades*/
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/*Header*/
+
+.container-hero {
+    background-color: var(--background-color);
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-nombre {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+
+.container-nombre h1 a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 3rem;
+    text-transform: uppercase;
+    /*Para poner la letra en mayuscula*/
+    letter-spacing: -1px;
+}
+
+.container-user {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.container-user a {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--primary-color);
+    padding-right: 1.5rem;
+    padding-left: .5rem;
+    border-right: 1px solid #000000;
+}
+
+
+.container-user .fa-cart-shopping {
+    font-size: 2.1rem;
+    color: var(--primary-color);
+    padding-right: .1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.container-user .fa-cart-shopping span{
+    font-size: 1.2rem;
+    color: #000000;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container-user .content-shopping-cart{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-user a:hover,
+.container-user .fa-cart-shopping:hover{
+    color: var(--negro);
+}
+
+
+/*Navbar*/
+.container-navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+
+.menu-toggle,
+.close-menu{
+    display: none;
+}
+
+.menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--negro);
+    font-weight: 600; /*Para agregar un tipo de negrita a la letra*/
+    position: relative;
+}
+
+/*Esto es para la linea debajo del nombre li*/
+.menu a::after {
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.menu a:hover::after {
+    opacity: 1;
+}
+
+.menu a:hover {
+    color: #FFF;
+}
+
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid #FFF;
+    border-radius: 20px;
+    background-color: #FFF;
+    height: 4.4rem;
+    overflow: hidden;
+}
+
+.search-form input {
+    outline: none;
+    font-family: inherit;
+    border: none;
+    width: 23rem;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    cursor: pointer;
+}
+
+.search-form .btn-search {
+    border: none;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+}
+
+.btn-search i {
+    font-size: 1.5rem;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/*Banner*/
+
+.banner{
+    background-image: url(../img/Productos/banner-productos.jpg);
+    height: 30rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-banner{
+    max-width: 90rem;
+    margin: 0 4%;
+    padding: 6.5rem 0;
+}
+
+.content-banner h2{
+    font-size: 9rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+
+/*Productos*/
+.container-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 1rem 1%;
+    margin-top: 5rem;
+}
+
+.container-categorias {
+    width: 300px;
+    margin-right: 5rem;
+}
+
+.categorys {
+    background-image: url('../img/Productos/img-tienda.jpeg');
+    background-position: center;
+    background-size: cover;
+    width: 350px;
+    height: 690px;
+    border-radius: 2rem;
+    margin-top: 15%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: 1rem;
+    float: left; /* Esto hace que el contenedor de categorías flote a la izquierda */
+}
+
+
+.container-products {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+
+.card-product{
+    background-color: #FFF;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-product:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-1%);
+}
+
+.container-img img{
+    width: 100%;
+}
+
+.button-group{
+    display: flex;
+    top: 0;
+    gap: 1rem;
+    z-index: -1;
+    margin-bottom: 1rem;
+}
+
+.button-group span i{
+    border: 1px solid var(--primary-color);
+    padding: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.button-group span a{
+    text-decoration: none;
+    color: var(--negro);
+}
+
+.button-group span:hover{
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.button-group span i{
+    font-size: 1.5rem;
+}
+
+.button-group span:hover i{
+    color: #FFF;
+}
+
+.card-product:hover .button-group{
+    z-index: 0;
+    right: -1rem;
+}
+
+.content-card-product{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, min-content);
+    row-gap: 1rem;
+}
+
+
+.content-card-product h3{
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.content-card-product h3 a{
+    text-decoration: none;
+    color: var(--negro);
+}
+
+.content-card-product h3:hover,
+.content-card-product h3 a:hover{
+    color: var(--primary-color);
+}
+
+.add-cart{
+    justify-self: start;
+    background-color: var(--primary-color);
+    color: #FFF;
+    padding: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all .4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    font-size: 1.2rem;
+    border: 0;
+}
+
+.add-cart:hover{
+    background-color: var(--gris);
+    color: #000000;
+    border: 1px solid var(--primary-color);
+}
+
+.add-cart i{
+    font-size: 1.2rem;
+}
+
+.content-card-product .price{
+    justify-self: end;
+    align-self: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
