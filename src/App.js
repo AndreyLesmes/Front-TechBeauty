@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom';
 import Index from './Pages/Index';
 import Login from './Pages/Login';
 import Header from './Pages/Layout/Header';
@@ -16,14 +16,16 @@ import Cabello from './Pages/Cabello';
 import Error404 from './Pages/Error404';
 import Error500 from './Pages/Error500';
 //Rutas Administrador
-import ListarProveedores from './Pages/Administrador/ListarProveedores';
-import CrearProducto from './Pages/Administrador/CrearProducto';
-import RegistrarProveedor from './Pages/Administrador/RegistrarProveedor';
-import EditarProducto from './Pages/Administrador/EditarProducto';
-import EditarProveedor from './Pages/Administrador/EditarProveedor';
-import Administrador from './Pages/Administrador/Administrador';
-import ListarProductos1 from './Pages/Administrador/ListarProductos';
-import Error404Admin from './Pages/Administrador/Error404Administrador';
+import ListarProveedores from './Pages/Dashboards/Administrador/ListarProveedores';
+import CrearProducto from './Pages/Dashboards/Administrador/CrearProducto';
+import RegistrarProveedor from './Pages/Dashboards/Administrador/RegistrarProveedor';
+import EditarProducto from './Pages/Dashboards/Administrador/EditarProducto';
+import EditarProveedor from './Pages/Dashboards/Administrador/EditarProveedor';
+import Administrador from './Pages/Dashboards/Administrador/Administrador';
+import ListarProductos1 from './Pages/Dashboards/Administrador/ListarProductos';
+import Error404Admin from './Pages/Dashboards/Administrador/Error404Administrador';
+//Rutas Vendedor
+import Vendedor from './Pages/Dashboards/Vendedor/Vendedor';
 
 function FooterControl() {
   const location = useLocation();
@@ -69,6 +71,8 @@ function App() {
         <Route path="/Admin/EditarProveedor/:nit" element={<EditarProveedor />} />
         <Route path="/Administrador" element={<Administrador />} />
         <Route path="/Admin/Error404" element={<Error404Admin />} />
+        {/*Rutas Vendedor*/}
+        <Route path="/Vendedor" element={<Vendedor />} />
       </Routes>
 
       <FooterControl />

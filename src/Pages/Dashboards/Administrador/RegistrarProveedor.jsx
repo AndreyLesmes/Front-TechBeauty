@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './CSS/proveedores_style.css';
-import SupplierService from '../../Service/SupplierService';
+import SupplierService from '../../../Service/SupplierService';
 import BarraDashboard from './BarraDashboard';
 
 const RegistrarProveedor = () => {
@@ -40,7 +40,7 @@ const RegistrarProveedor = () => {
 
   return (
     <>
-      <BarraDashboard />
+      <BarraDashboard />llig
       <div className="containerCreateSupplier">
         <main>
           <div className="contentContainer-Supplier">
