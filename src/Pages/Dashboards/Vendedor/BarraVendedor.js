@@ -52,12 +52,12 @@ const BarraVendedor = () => {
                             <span>Buscar Venta</span>
                         </Link>
                     </div>
-                    <div className="enlace">
+                    {/*<div className="enlace">
                         <Link to="/SugerirPromociones" className="sugerir-promociones">
                             <i className="bi bi-gift"></i>
                             <span>Sugerir Promociones</span>
                         </Link>
-                    </div>
+                    </div>*/}
                     <div className="enlace">
                         <Link to="/DatosPersonales" className="datos-personales">
                             <i className="bi bi-card-text"></i>

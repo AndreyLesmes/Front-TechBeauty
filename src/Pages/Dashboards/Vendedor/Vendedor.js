@@ -41,12 +41,12 @@ const Vendedor = () => {
                             <span>Buscar Venta</span>
                         </Link>
                     </div>
-                    <div className="botones">
+                    {/*<div className="botones">
                         <Link to="/BuscarVenta">
                             <i className="bi bi-search"></i>
                             <span>Sugerir Promociones</span>
                         </Link>
-                    </div>
+                    </div>*/}
                     <div className="botones">
                         <Link to="/DatosPersonales">
                             <i className="bi bi-card-text"></i>
