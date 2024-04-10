@@ -52,7 +52,7 @@ const Login = () => {
                         window.location.href = '/';
                         break;
                     case 2:
-                        window.location.href = '/Tienda';
+                        window.location.href = '/Vendedor';
                         break;
                     case 3:
                         window.location.href = '/Administrador';

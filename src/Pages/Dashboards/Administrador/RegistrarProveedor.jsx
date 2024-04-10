@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './CSS/proveedores_style.css';
-import SupplierService from '../../../Service/SupplierService';
+import SupplierService from '../../../components/Service/SupplierService';
 import BarraDashboard from './BarraDashboard';
 
 const RegistrarProveedor = () => {

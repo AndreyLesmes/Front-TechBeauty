@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import ProductService from '../../Service/ProductService';
+import ProductService from '../../../components/Service/ProductService';
 import './CSS/registrar_Producto.css';
 import BarraDashboard from './BarraDashboard';
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './CSS/registrar_Producto.css';
-import ProductService from '../../Service/ProductService';
+import ProductService from '../../../components/Service/ProductService';
 import BarraDashboard from './BarraDashboard';
 
 const CrearProducto = () => {

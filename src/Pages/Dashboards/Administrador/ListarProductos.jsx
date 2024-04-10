@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ProductService from '../../Service/ProductService';
+import ProductService from '../../../components/Service/ProductService';
 import { Link } from 'react-router-dom';
 import BarraDashboard from './BarraDashboard';
 

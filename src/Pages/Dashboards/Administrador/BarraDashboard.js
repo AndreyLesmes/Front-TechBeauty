@@ -15,7 +15,7 @@ const BarraDashboard = () => {
             <div className={`menu-dashboard ${menuAbierto ? 'open' : ''}`}>
                 <div className="top-menu">
                     <div className="logo">
-                        <img src={require("../img/logo.png")} alt="logo" />
+                        <img src={require("../../img/logo.png")} alt="logo" />
                         <span>TechBeauty</span>
                     </div>
                     <div className="toggle" onClick={toggleMenu}>

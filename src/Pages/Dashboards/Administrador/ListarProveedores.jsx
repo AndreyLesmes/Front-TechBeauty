@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import SupplierService from '../../Service/SupplierService';
+import SupplierService from '../../../components/Service/SupplierService';
 import './CSS/consultar_proveedores.css';
 import BarraDashboard from './BarraDashboard';
 
