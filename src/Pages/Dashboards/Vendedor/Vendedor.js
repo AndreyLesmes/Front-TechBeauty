@@ -18,25 +18,25 @@ const Vendedor = () => {
                 <h3>Acciones Posibles a Realizar</h3>
                 <div className="botonesAcciones">
                     <div className="botones">
-                        <Link to="/ConsultarProductos">
+                        <Link to="/Vendedor/ListarProductos">
                             <i className="bi bi-search"></i>
                             <span>Consultar Productos</span>
                         </Link>
                     </div>
                     <div className="botones">
-                        <Link to="/RegistrarVenta">
+                        <Link to="/Vendedor/RegistrarVenta">
                             <i className="bi bi-cash"></i>
                             <span>Registrar Venta</span>
                         </Link>
                     </div>
                     <div className="botones">
-                        <Link to="/ConsultarVentas">
+                        <Link to="/Vendedor/ConsultarVentas">
                             <i className="bi bi-cart4"></i>
                             <span>Consultar Ventas</span>
                         </Link>
                     </div>
                     <div className="botones">
-                        <Link to="/BuscarVenta">
+                        <Link to="/Vendedor/ConsultarVentas">
                             <i className="bi bi-search"></i>
                             <span>Buscar Venta</span>
                         </Link>
@@ -48,7 +48,7 @@ const Vendedor = () => {
                         </Link>
                     </div>*/}
                     <div className="botones">
-                        <Link to="/DatosPersonales">
+                        <Link to="/Vendedor/DatosPersonales">
                             <i className="bi bi-card-text"></i>
                             <span>Datos Personales</span>
                         </Link>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './CSS/barraLateral.css';
+import './CSS/barraLateral.css'; 
+import './CSS/contenido.css';
 
 const BarraVendedor = () => {
     const [menuAbierto, setMenuAbierto] = useState(false);
@@ -23,49 +24,49 @@ const BarraVendedor = () => {
                 </div>
                 <div className="menu">
                     <div className="enlace">
-                        <Link to="/Inicio" className="inicio">
+                        <Link to="/Vendedor" className="inicio">
                             <i className="bi bi-house-door-fill"></i>
                             <span>Inicio</span>
                         </Link>
                     </div>
                     <div className="enlace">
-                        <Link to="/ConsultarProductos" className="productos">
+                        <Link to="/Vendedor/ListarProductos" className="nav__link nav__link--inside">
                             <i className="bi bi-search"></i>
                             <span>Consultar Productos</span>
                         </Link>
                     </div>
                     <div className="enlace">
-                        <Link to="/RegistrarVenta" className="venta">
+                        <Link to="/Vendedor/RegistrarVenta" className="nav__link nav__link--inside">
                             <i className="bi bi-cash"></i>
                             <span>Registrar Venta</span>
                         </Link>
                     </div>
                     <div className="enlace">
-                        <Link to="/ConsultarVentas" className="consultar-ventas">
+                        <Link to="/Vendedor/ConsultarVentas" className="nav__link nav__link--inside">
                             <i className="bi bi-cart4"></i>
                             <span>Consultar Ventas</span>
                         </Link>
                     </div>
                     <div className="enlace">
-                        <Link to="/BuscarVenta" className="buscar-venta">
+                        <Link to="/Vendedor/BuscarVenta" className="nav__link nav__link--inside">
                             <i className="bi bi-search"></i>
                             <span>Buscar Venta</span>
                         </Link>
                     </div>
                     {/*<div className="enlace">
-                        <Link to="/SugerirPromociones" className="sugerir-promociones">
+                        <Link to="/SugerirPromociones" className="nav__link nav__link--inside">
                             <i className="bi bi-gift"></i>
                             <span>Sugerir Promociones</span>
                         </Link>
                     </div>*/}
                     <div className="enlace">
-                        <Link to="/DatosPersonales" className="datos-personales">
+                        <Link to="/Vendedor/DatosPersonales" className="datos">
                             <i className="bi bi-card-text"></i>
                             <span>Datos Personales</span>
                         </Link>
                     </div>
                     <div className="enlace">
-                        <Link to="/CerrarSesion" className="cerrar-sesion">
+                        <Link to="/CerrarSesion" className="cerrarS">
                             <i className="bi bi-power"></i>
                             <span>Cerrar Sesión</span>
                         </Link>

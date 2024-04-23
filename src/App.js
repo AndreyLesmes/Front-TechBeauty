@@ -26,6 +26,8 @@ import ListarProductos1 from './Pages/Dashboards/Administrador/ListarProductos';
 import Error404Admin from './Pages/Dashboards/Administrador/Error404Administrador';
 //Rutas Vendedor
 import Vendedor from './Pages/Dashboards/Vendedor/Vendedor';
+import ListarProductosV from './Pages/Dashboards/Vendedor/ListarProductos';
+import ConsultarVentasV from './Pages/Dashboards/Vendedor/ConsultarVentas';
 
 function FooterControl() {
   const location = useLocation();
@@ -73,6 +75,9 @@ function App() {
         <Route path="/Admin/Error404" element={<Error404Admin />} />
         {/*Rutas Vendedor*/}
         <Route path="/Vendedor" element={<Vendedor />} />
+        <Route path="/Vendedor/ListarProductos" element={<ListarProductosV />} />
+        <Route path="/Vendedor/RegistrarVenta" element={<ListarProductosV />} />
+        <Route path="/Vendedor/ConsultarVenta" element={<ConsultarVentasV />} />
       </Routes>
 
       <FooterControl />

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+    --primary-color: #A6BDDC;
+    --background-color: #fffdfa;
+    --rosa: #FFB6C1;
+    --gris: #f5f5dcb2; /*Para el hover*/
+    --negro: #000000;
+    --lilaClaro: #D9A2E3;
+}
+
+
+.container-ListProducts {
+    margin-top: 2rem;
+    margin: 2rem;
+}
+
+/*Para la letra*/
+.container-ListProducts .titulo h2{
+    padding: 12px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.boton-redirect{
+    display: flex;
+    justify-content: center;
+}
+
+.boton-redirect .user-link,
+.create-new,
+.closeFormButton{
+    background-color: #A6BDDC;
+    padding: 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 3rem;
+    color: #fff;
+    border: none;
+}
+
+.create-new{
+    margin: 2% 45%;
+    padding: 2rem 5rem;
+    cursor: pointer;
+}
+
+.create-new:hover,
+.closeFormButton:hover{
+    background-color: var(--gris);
+    color: var(--negro);
+}
+
+.closeFormButton{
+    font-size: 1.6rem;
+}
+
+.card-tittle{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.tittle-card{
+    font-size: 3rem;
+}
+
+.boton-redirect .user-link:hover{
+    background-color: var(--gris);
+    color: #000;
+}
+
+.registro_productos .registrarProductos,
+.editar_productos .editarProductos{
+    width: 650px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 45px;
+}
+
+#miTabla {
+    font-size: 1.4rem;
+    background-color: var(--background-color);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#miTabla th {
+    background-color: var(--primary-color);
+}
+
+#miTabla th,
+#miTabla td {
+    text-align: center;
+    padding: 8px;
+}
+
+#miTabla .td-description {
+    text-align: start;
+}
+
+#miTabla tbody {
+    height: 300px; /* Altura fija del cuerpo de la tabla */
+    overflow-y: auto; /* Desbordamiento vertical */
+}
+
+#miTabla tbody tr:nth-child(even) {
+    background-color: var(--background-color);
+}
+
+#miTabla tbody tr:hover {
+    background-color: var(--gris);
+}
+
+#miTabla .editar {
+    background-color: #44a347;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    text-decoration: none;
+    border: none;
+}
+
+#miTabla .eliminar {
+    background-color: #e42121;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    text-decoration: none;
+    border: none;
+}
+
+#miTabla .editar:hover,
+#miTabla .eliminar:hover {
+    text-decoration: none;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button{
+    padding: 2rem;
+    border: 0;
+    border-radius: 2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+.pagination button:hover{
+    background-color: var(--gris);
+    color: var(--negro);
+}
