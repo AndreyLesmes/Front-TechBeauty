@@ -5,25 +5,59 @@ import { Link } from 'react-router-dom';
 
 const Header = ({ allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts, categoria, setCategoria }) => {
     const [active, setActive] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('');
 
     const onDeleteProduct = (product) => {
-
-        const results = allProducts.filter(
-            item => item.id !== product.id
-        );
+        const results = allProducts.filter(item => item.id !== product.id);
         setTotal(total - product.precio * product.cantidad);
         setCountProducts(countProducts - product.cantidad);
         setAllProducts(results);
-    }
+    };
 
     const onClearCart = () => {
         setAllProducts([]);
         setTotal(0);
         setCountProducts(0);
-    }
+    };
+
+    const onAddProduct = (product) => {
+        const updatedProducts = allProducts.map(item => {
+            if (item.id === product.id) {
+                return { ...item, cantidad: item.cantidad + 1 };
+            }
+            return item;
+        });
+        setTotal(total + product.precio);
+        setCountProducts(countProducts + 1);
+        setAllProducts(updatedProducts);
+    };
+
+    const onRemoveProduct = (product) => {
+        if (product.cantidad === 1) {
+            onDeleteProduct(product);
+        } else {
+            const updatedProducts = allProducts.map(item => {
+                if (item.id === product.id) {
+                    return { ...item, cantidad: item.cantidad - 1 };
+                }
+                return item;
+            });
+            setTotal(total - product.precio);
+            setCountProducts(countProducts - 1);
+            setAllProducts(updatedProducts);
+        }
+    };
 
     const handleCategoryClick = (categoria) => {
         setCategoria(categoria);
+    };
+
+    const filteredProducts = allProducts.filter(product =>
+        product.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    const handleSearch = (e) => {
+        setSearchTerm(e.target.value);
     };
 
     return (
@@ -65,14 +99,22 @@ const Header = ({ allProducts, setAllProducts, total, setTotal, countProducts, s
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    {allProducts.map(product => (
+                                                    {filteredProducts.map(product => (
                                                         <tr key={product.id}>
                                                             <td><img className="carrito-producto-imagen" src={product.imagen} alt={product.id} /></td>
                                                             <td>{product.nombre}</td>
-                                                            <td>{product.cantidad}</td>
+                                                            <td>
+                                                                <button className="cantidad-btn" onClick={() => onRemoveProduct(product)}>-</button>
+                                                                {product.cantidad}
+                                                                <button className="cantidad-btn" onClick={() => onAddProduct(product)}>+</button>
+                                                            </td>
                                                             <td>${product.precio}</td>
                                                             <td>${product.precio * product.cantidad}</td>
-                                                            <td><button className="carrito-producto-eliminar"><i className="fa-thin fa-x" onClick={() => onDeleteProduct(product)}></i></button></td>
+                                                            <td>
+                                                                <button className="carrito-producto-eliminar" onClick={() => onDeleteProduct(product)}>
+                                                                    <i className="fa-thin fa-x"></i>
+                                                                </button>
+                                                            </td>
                                                         </tr>
                                                     ))}
                                                 </tbody>
@@ -80,15 +122,15 @@ const Header = ({ allProducts, setAllProducts, total, setTotal, countProducts, s
 
                                             <div className="cart-total">
                                                 <h3>Total:</h3>
-                                                <span className="total-pagar">{total}</span>
+                                                <span className="total-pagar">${total.toFixed(2)}</span>
                                             </div>
                                             <button className='vaciar-carrito' onClick={onClearCart}>Vaciar Carrito</button>
+                                            <button className='pagar-carrito'>Pagar</button>
                                         </>
                                     ) : (
                                         <p id="carrito-vacio" className="carrito-vacio">Tu carrito está vacío <i className="fa-regular fa-face-frown"></i></p>
                                     )}
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -112,13 +154,9 @@ const Header = ({ allProducts, setAllProducts, total, setTotal, countProducts, s
                             <li><Link to={"/Error404"}>Ofertas</Link></li>
                         </ul>
                         <form className="search-form">
-                            <input type="search" placeholder="Buscar" />
+                            <input type="search" placeholder="Buscar" value={searchTerm} onChange={handleSearch} />
                             <button className="btn-search"><i className="fa-solid fa-magnifying-glass"></i></button>
                         </form>
-                        {/*<div className='crud-components'>
-                            <Link to={"/Admin/ListarProductos"} className="user-link">Productos</Link>
-                            <Link to={"/Admin/ListarProveedores"} className="user-link">Proveedores</Link>
-                                </div>*/}
                     </nav>
                 </div>
             </header>

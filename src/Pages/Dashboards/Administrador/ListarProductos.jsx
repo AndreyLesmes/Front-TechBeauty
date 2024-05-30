@@ -37,7 +37,7 @@ const ListarProductos = () => {
 
   return (
     <>
-      <BarraDashboard />
+      {/*<BarraDashboard />*/}
       <div className="container">
         <div className="titulo">
           <h2>Productos Registrados</h2>

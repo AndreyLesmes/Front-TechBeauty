@@ -43,7 +43,7 @@ const ListarProveedores = () => {
 
   return (
     <>
-      <BarraDashboard />
+      {/*<BarraDashboard />*/}
       <div className="container-ListSuppliers">
         <div className="titulo">
           <h2>Proveedores Registrados</h2>

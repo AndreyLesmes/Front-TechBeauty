@@ -553,7 +553,7 @@ html {
 .container-footer{
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
     padding: 1.9rem;
 }
 

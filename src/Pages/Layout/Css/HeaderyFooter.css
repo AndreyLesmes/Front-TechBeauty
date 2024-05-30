@@ -290,101 +290,36 @@
     transition: all 0.4s;
 }
 
-
-/*Footer*/
-.footer {
+.pagar-carrito {
+    width: 95%;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: block;
+    margin: 0 auto 1rem;
+    border: 0;
     background-color: var(--primary-color);
-}
-
-.container-footer {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    padding: 1.9rem;
-}
-
-.menu-footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) 30rem;
-    gap: 3rem;
-    justify-items: center;
-}
-
-.title-footer {
-    font-weight: 600;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-}
-
-.contact-info,
-.information,
-.logo-footer {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.contact-info ul,
-.information ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contact-info ul li,
-.information ul li {
-    list-style: none;
-    color: #FFF;
-    font-size: 1.4rem;
-    font-weight: 300;
-}
-
-.information .description {
-    font-size: 1.4rem;
-    color: #FFF;
-}
-
-.information li a {
-    color: #FFF;
-    font-size: 1.4rem;
-    font-weight: 600;
-    text-decoration: none;
-    letter-spacing: .1rem;
-}
-
-.information li a:hover {
     color: var(--negro);
 }
 
-.social-icons {
-    display: flex;
-    gap: 6.5rem;
+.pagar-carrito:hover {
+    background-color: var(--negro);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.4s;
 }
 
-.social-icons i {
-    font-size: 3.6rem;
-}
-
-.social-icons a {
-    text-decoration: none;
+.cantidad-btn {
+    background-color: var(--primary-color);
+    border: none;
     color: var(--negro);
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.social-icons .facebook a:hover,
-.social-icons .instagram:hover {
-    color: var(--gris);
+.cantidad-btn:hover {
+    background-color: var(--negro);
+    color: #fff;
 }
 
-.copy {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
-    padding-top: 2rem;
-    border-top: 1px solid var(--background-color);
-}
-
-.copy small {
-    font-weight: 400;
-    font-size: 1.2rem;
-}

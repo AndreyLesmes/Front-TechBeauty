@@ -77,6 +77,26 @@ const BarraDashboard = () => {
                             </li>
                         </ul>
                     </div>
+
+                    {/*<div className="enlace list__item">
+                        <div className="list__button list__button--click">
+                            <i className="bi bi-bag-fill"></i>
+                            <span>Cliente</span>
+                            <i className="bi bi-arrow-down"></i>
+                        </div>
+                        <ul className="list__show">
+                            <li className="list__inside">
+                                <Link to="/Admin/ConsultarCliente" className="nav__link nav__link--inside">Consultar Clientes</Link>
+                            </li>
+                            <li className="list__inside">
+                                <Link to="/Admin/BuscarCompra" className="nav__link nav__link--inside"></Link>
+                            </li>
+                            <li className="list__inside">
+                                <Link to="/Admin/VentasRegistradas" className="nav__link nav__link--inside"></Link>
+                            </li>
+                        </ul>
+                    </div>*/}
+
                     <div className="enlace">
                         <Link to="/Admin/DatosPersonales" className="datos">
                             <i className="bi bi-card-text"></i>

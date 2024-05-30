@@ -51,7 +51,7 @@ const CrearProducto = () => {
     try {
       await ProductService.createProduct(product);
       alert('Producto creado exitosamente');
-      window.location.href = '/Admin/ListarProductos'; // Redirect to list of products
+      window.location.href = '/Admin/ListarProductos'; 
     } catch (error) {
       console.error('Error al crear el producto:', error);
       alert('Error al crear el producto');
@@ -99,7 +99,7 @@ const CrearProducto = () => {
                   <br />
                   <div className='buttons-action'>
                     <input type="submit" className='button-create' name="submit" value="Crear Producto" />
-                    <Link className="button-create" to={"/ListarProductos"}>Cancelar</Link>
+                    <Link className="button-create" to={"/Admin/ListarProductos"}>Cancelar</Link>
                   </div>
                 </div>
               </div>

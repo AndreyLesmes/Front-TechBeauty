@@ -58,7 +58,7 @@ const EditarProducto = () => {
 
     return (
         <>
-            <BarraDashboard />
+            {/*<BarraDashboard />*/}
             <div className="modal fade" id="editarProductoModal" tabIndex="-1" role="dialog" aria-labelledby="editarProductoModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">

@@ -40,7 +40,7 @@ const RegistrarProveedor = () => {
 
   return (
     <>
-      <BarraDashboard />llig
+      {/*<BarraDashboard />*/}
       <div className="containerCreateSupplier">
         <main>
           <div className="contentContainer-Supplier">

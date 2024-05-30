@@ -276,10 +276,10 @@ button:disabled:hover {
     background-color: var(--primary-color);
 }
 
-.container-footer {
+.container-footer{
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
     padding: 1.9rem;
 }
 
